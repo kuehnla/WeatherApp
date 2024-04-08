@@ -1,7 +1,7 @@
-// https://api.weatherapi.com/v1/current.json?key=14be6af200c2423789f164103240204&q=dfdfdf
+// https://api.weatherapi.com/v1/current.json?key=14be6af200c2423789f164103240204&q=
 
 export default function Controller(
-  { location, isFetch, setCityRegion, setTime, setCondition, setTempC,
+  { location, isFetch, setCityRegion, setTime, setCondition, setTempC, setCondIcon,
     setTempF, setFeelsLikeC, setFeelsLikeF, setWindKph, setWindMph, setIsFetch }
 ) {
   if (!isFetch) return;
@@ -27,7 +27,8 @@ export default function Controller(
     
     setCityRegion(res.location.name + ", " + res.location.region);
     setTime(new Date(res.location.localtime).toLocaleTimeString());
-    setCondition(res.current.condition);
+    setCondition(res.current.condition.text);
+    setCondIcon(res.current.condition.icon);
     setTempC(res.current.temp_c);
     setTempF(res.current.temp_f);
     setFeelsLikeC(res.current.feelslike_c);
