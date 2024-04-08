@@ -29,12 +29,12 @@ export default function Controller(
     setTime(new Date(res.location.localtime).toLocaleTimeString());
     setCondition(res.current.condition.text);
     setCondIcon(res.current.condition.icon);
-    setTempC(res.current.temp_c);
-    setTempF(res.current.temp_f);
-    setFeelsLikeC(res.current.feelslike_c);
-    setFeelsLikeF(res.current.feelslike_f);
-    setWindKph(res.current.wind_kph);
-    setWindMph(res.current.wind_mph);
+    setTempC("Temp: " + res.current.temp_c + " °C");
+    setTempF("Temp: " + res.current.temp_f + " °F");
+    setFeelsLikeC("Feels like: " + res.current.feelslike_c + " °C");
+    setFeelsLikeF("Feels like: " + res.current.feelslike_f + " °F");
+    setWindKph("Wind: " + res.current.wind_kph + " kph");
+    setWindMph("Wind: " + res.current.wind_mph + " mph");
     setIsFetch(false);
   }
 }
