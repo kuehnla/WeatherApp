@@ -10,6 +10,8 @@ export default function Controller(
 
   request();
 
+  console.log(location);
+
   async function request() {
     try {
       const resp = await fetch(call, {mode: 'cors'});

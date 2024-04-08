@@ -10,6 +10,7 @@ function App() {
 
   const [isFetch, setIsFetch] = useState(true);
   const [location, setLocation] = useState("milwaukee");
+  console.log(location);
 
   const [cityRegion, setCityRegion] = useState("");
   const [time, setTime] = useState("");
@@ -24,8 +25,6 @@ function App() {
 
   const [isMetric, setIsMetric] = useState(false);
 
-  console.log(cityRegion);
-
   return (
 
     <div className="app">
@@ -38,7 +37,7 @@ function App() {
         </div>
         <div className="inputContainer">
           <img src={pin} id="pin" />
-          <Input setLocation={setLocation} setIsFetch={setIsFetch} />
+          <Input setLocation={setLocation} setIsFetch={setIsFetch} location={location} />
         </div>
         <div className="placeTime">
           <h2>{cityRegion}</h2>

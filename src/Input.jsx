@@ -3,7 +3,6 @@ export default function Input({ location, setLocation, setIsFetch }) {
     if (e.keyCode != 13 || location === e.target.value) {
       return;
     }
-    console.log("turbo");
     setLocation(e.target.value);
     setIsFetch(true);
     e.target.value="";
