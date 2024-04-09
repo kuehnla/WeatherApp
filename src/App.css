@@ -69,7 +69,6 @@ input:focus{
   color: #fff;
   flex-direction: column;
   align-items: center;
-  font-size: min(1vw, 20px);
 }
 
 .placeTime h3 {
@@ -91,7 +90,6 @@ input:focus{
 .condition h1 {
   display: flex;
   margin: 0;
-  font-size: min(2vw, 20px);
 }
 
 #condIcon {
